@@ -1,11 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap");
 
+/* :root{ */
+  /* --primary-color: #40739e; */
+  /* --secondary: #dbfffe; */
+  /* --black: #141414; */
+  /* --white: #fff; */
+  /* --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1); */
+/* } */
+
 :root{
-  --primary-color: #40739e;
-  --secondary: #dbfffe;
+  --primary-color: #274c77;
+  --secondary: #a3cef1;
   --black: #141414;
   --white: #fff;
+  --white2: #e7ecef;
   --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+  /* --text-shadow: 11px 6px 7px rgba(0,0,0,0.59); */
+  /* --text-shadow2: 34px -32px 3px rgba(163,206,241,0.99); */
 }
 
 *{
@@ -45,6 +56,7 @@ section{
 .heading{
   position: relative;
   color: var(--primary-color);
+  text-shadow: var(--text-shadow2);
   font-size: 3rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -134,18 +146,21 @@ section{
   transition: 1000ms ease;
 }
 
-/* header */
+/*========================================================================================
+//                                           header 
+==========================================================================================*/
 
 .header{
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 1000;
-  background: var(--white);
+  background: var(--secondary);
   box-shadow: var(--box-shadow);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 2rem 9%;
+  border-radius: 0 0 20px 20px;
 }
 
 .header .logo{
@@ -160,14 +175,15 @@ section{
 }
 
 .header .navbar a{
-  font-size: 1.7rem;
-  color: var(--black);
+  font-size: 2.0rem;
+  color: var(--primary-color);
+  text-shadow: var(--text-shadow);
   margin: 0 1rem;
   padding-block: 1rem;
 }
 
 .header .navbar a:hover{
-  color: var(--primary-color);
+  color: var(--white);
 }
 
 .header .navbar .hover-underline{
@@ -252,13 +268,16 @@ section{
   cursor: pointer;
 }
 
-/* home */
+/*========================================================================================
+//                                           home
+==========================================================================================*/
+
 
 .home{
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: url(../images/home.jpg) no-repeat;
+  background: url(./images/bg-for-upper1.jpg) no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -269,14 +288,16 @@ section{
 
 .home .content h3{
   font-size: 5rem;
-  color: var(--white);
+  color: var(--primary-color);
+  text-shadow: 2px 2px 8px var(--secondary);
   line-height: 1.2;
 }
 
 .home .content p{
-  font-size: 1.5rem;
+  font-size: 2rem;
   line-height: 2;
-  color: var(--white);
+  color: var(--primary-color);
+  text-shadow: 2px 2px 8px var(--secondary);
   padding: 1rem 0;
 }
 
@@ -314,6 +335,7 @@ section{
 
 .about .container .about-content h3{
   font-size: 3rem;
+  text-shadow: var(--text-shadow);
   color: var(--primary-color);
 }
 
@@ -339,6 +361,7 @@ section{
   border: .1rem solid var(--primary-color);
   background: var(--secondary);
   cursor: pointer;
+  border-radius: 20px;
 }
 
 .subjects .box-container .box:hover{
@@ -751,6 +774,7 @@ section{
 .footer{
   background: var(--secondary);
   text-align: center;
+  border-radius: 20px 20px 0 0 ;
 }
 
 .footer .box-container{
@@ -851,7 +875,7 @@ section{
     width: 30rem;
     box-shadow: var(--box-shadow);
     border-radius: .5rem;
-    background: var(--white);
+    background: var(--primary-color);
   }
 
   .header .navbar.active{
